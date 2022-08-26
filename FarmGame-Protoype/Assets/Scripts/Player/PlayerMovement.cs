@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     //Animation
     private Animator _playerAnimator;
     private Vector2 _animatorValues;
+
+    //Particle Effect
+    ParticleSystem _particleSystem;
     
     //Camera
     private Camera _cameraPlayer;
@@ -33,6 +36,10 @@ public class PlayerMovement : MonoBehaviour
 
         // Define the animator
         _playerAnimator = GetComponent<Animator>();
+
+        //  Assing the particle system
+        _particleSystem = this.gameObject.transform.GetChild(0).GetComponent<ParticleSystem>();
+        _particleSystem.Stop();
 
         // Define the camera
         _cameraPlayer = FindObjectOfType<Camera>();
@@ -54,8 +61,6 @@ public class PlayerMovement : MonoBehaviour
         // Input
         PollInput();
 
-        // Camera
-
         // Animations
         AnimationValues();
     }
@@ -72,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     void PollInput(){
         var movementInputVector = _playerControls.Player.Move.ReadValue<Vector2>();
         movementInput = movementInputVector;
-        Debug.Log(movementInput);
+        //Debug.Log(movementInput);
         Move(movementInputVector);
     }
 
@@ -94,10 +99,12 @@ public class PlayerMovement : MonoBehaviour
         if(_animatorValues.magnitude == 0){
             _playerAnimator.SetBool("isIdle",true);
             _playerAnimator.SetBool("isWalking",false);
+            _particleSystem.Stop();
         }
         else{
             _playerAnimator.SetBool("isIdle",false);
             _playerAnimator.SetBool("isWalking",true);
+            _particleSystem.Play();
             _playerAnimator.SetFloat("Horizontal", _animatorValues.x);
             _playerAnimator.SetFloat("Vertical", _animatorValues.y);
             _playerAnimator.SetFloat("Speed", _animatorValues.magnitude);
