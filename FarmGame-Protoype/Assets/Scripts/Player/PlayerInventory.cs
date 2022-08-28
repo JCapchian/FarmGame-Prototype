@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [Header ("Inventory of the player")]
+    //[Header ("Propiedades")]
     private PlayerControls playerControls;
     private CircleCollider2D pickUpZone;
-    [SerializeField]
-    private int obteinedMoney;    
+     
+    [Header ("Herramientas")]   
     public bool gotHacha;
     public bool gotAzada;
     public bool gotRegadera;
-    [SerializeField]
-    private List<GameObject> inventario = new List<GameObject>();
+    [Header ("Items")]
+    public int obteinedMoney;
+    public int amountTrigo;
+    public int amountDurazno;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,8 @@ public class PlayerInventory : MonoBehaviour
     {
         
     }
-
+    
+    #region Tools Region
     public void GetTool(string toolGround)
     {
         switch (toolGround)
@@ -49,4 +52,10 @@ public class PlayerInventory : MonoBehaviour
     {
 
     }
+
+    #endregion
+
+    #region Items Region
+
+    #endregion 
 }

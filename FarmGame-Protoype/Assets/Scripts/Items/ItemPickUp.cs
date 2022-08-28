@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public UIManager _uiManager;
+    public string typeItem;
+
+    private void Awake() {
+        //Assing player inventory
+        _uiManager = FindObjectOfType<UIManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.tag == "Player")
+        {
+            //Call the fuction that save the intem in the inventory
+            _uiManager.UpdateUI(typeItem);
+            
+            Destroy(this.gameObject);
+
+        }
     }
 }
