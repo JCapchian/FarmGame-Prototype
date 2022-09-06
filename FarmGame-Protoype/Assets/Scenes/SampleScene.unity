@@ -238,6 +238,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1479301178, guid: 7c3726ced6e3fec4c83327a9d3d82ef8, type: 3}
+      propertyPath: toolType
+      value: Axe
+      objectReference: {fileID: 0}
     - target: {fileID: 119530522026849456, guid: 7c3726ced6e3fec4c83327a9d3d82ef8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8357,9 +8361,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a21a1e8303db24449cc2620d01cb51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gotHacha: 0
-  gotAzada: 0
-  gotRegadera: 0
+  interacted: 0
+  usingTool: 0
+  activeTool: 0
+  gotAxe: 0
+  gotHoe: 0
+  gotWateringCan: 0
   obteinedMoney: 0
   amountTrigo: 0
   amountDurazno: 0
@@ -25050,6 +25057,7 @@ RectTransform:
   - {fileID: 1474645383}
   - {fileID: 1549239779}
   - {fileID: 794060049}
+  - {fileID: 1925885113}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25073,6 +25081,10 @@ MonoBehaviour:
   playerInventory: {fileID: 0}
   amountDurazno: {fileID: 1687431067}
   amountTrigo: {fileID: 1642943399}
+  toolSlot: {fileID: 2147440112}
+  AxeIcon: {fileID: 8549692267302808760, guid: 862cb62377f61014d8b02692c5ff0159, type: 3}
+  HoeIcon: {fileID: -554010742415259762, guid: 862cb62377f61014d8b02692c5ff0159, type: 3}
+  WateringCanIcon: {fileID: 3435190667326688956, guid: 862cb62377f61014d8b02692c5ff0159, type: 3}
 --- !u!1 &1642943397
 GameObject:
   m_ObjectHideFlags: 0
@@ -30338,6 +30350,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1925885112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1925885113}
+  m_Layer: 5
+  m_Name: Tools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1925885113
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925885112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2147440111}
+  m_Father: {fileID: 1612544435}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -415.01025, y: 192.68655}
+  m_SizeDelta: {x: 191.9795, y: 190.6269}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2065829249
 GameObject:
   m_ObjectHideFlags: 0
@@ -52000,7 +52048,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -30, y: -23, z: 0}
-  m_Size: {x: 61, y: 47, z: 1}
+  m_Size: {x: 243, y: 506, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -52095,6 +52143,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098644334}
   m_CullTransparentMesh: 1
+--- !u!1 &2147440110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2147440111}
+  - component: {fileID: 2147440113}
+  - component: {fileID: 2147440112}
+  m_Layer: 5
+  m_Name: ToolSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2147440111
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147440110}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1925885113}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2147440112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147440110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2147440113
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147440110}
+  m_CullTransparentMesh: 1
 --- !u!1001 &86163328539692053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52146,6 +52269,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 86163329277933530, guid: 5f00ed5d989f7bf4db489436ceb99ee0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 86163329277933532, guid: 5f00ed5d989f7bf4db489436ceb99ee0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -52154,6 +52281,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 86163329277933534, guid: 5f00ed5d989f7bf4db489436ceb99ee0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7595986285605212588, guid: f420edd7e336f574c944f66a11eeb19c, type: 3}
     - target: {fileID: 86163329277933534, guid: 5f00ed5d989f7bf4db489436ceb99ee0, type: 3}
       propertyPath: m_SortingOrder
       value: 3

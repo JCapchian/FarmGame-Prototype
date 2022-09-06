@@ -17,11 +17,29 @@
                 {
                     "name": "Interact",
                     "type": "Button",
-                    "id": "eaec5cdb-1113-4850-8007-1c16f4072371",
+                    "id": "ff6d51a5-55e1-4aad-af1d-20aa2984ed9a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UseTool",
+                    "type": "Button",
+                    "id": "2d906fd5-f280-4f90-8df6-4222cb3a9175",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchTools [Numbers]",
+                    "type": "Value",
+                    "id": "174b2176-625b-446f-abb0-1239ec9ca7e5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -159,7 +177,51 @@
                 },
                 {
                     "name": "",
-                    "id": "211ea244-b4a7-4bb7-99c4-d936138ec699",
+                    "id": "a7d2d7df-4436-499d-abe7-9ed846efd094",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchTools [Numbers]",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7d494a87-8b80-4688-9ba4-df420d77284d",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchTools [Numbers]",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "539339ec-aa72-402b-bf4d-5a5f4f3b2f59",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchTools [Numbers]",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d1cb3127-9e54-4ac1-91e6-6c0c82df6667",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseTool",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6597963-28bc-4d6a-a1dd-9017da17fe64",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",

@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PollInput(){
         var movementInputVector = _playerControls.Player.Move.ReadValue<Vector2>();
-        movementInput = movementInputVector;
+        //movementInput = movementInputVector;
         //Debug.Log(movementInput);
         Move(movementInputVector);
     }
