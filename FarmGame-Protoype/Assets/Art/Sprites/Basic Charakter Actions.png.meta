@@ -70,10 +70,154 @@ TextureImporter:
     second: Basic Charakter Actions_67
   - first:
       213: -5847124457340393012
-    second: Basic Charakter Actions_69
+    second: WaterCanRigth_Start
   - first:
       213: -1148160205141026007
-    second: Basic Charakter Actions_71
+    second: WaterCanRigth_End
+  - first:
+      213: 8607240835638418105
+    second: Basic Charakter Actions_0
+  - first:
+      213: 4825233689777840938
+    second: Basic Charakter Actions_1
+  - first:
+      213: 901622726829898842
+    second: Basic Charakter Actions_4
+  - first:
+      213: -4177016454944706689
+    second: Basic Charakter Actions_5
+  - first:
+      213: 4075962118145448364
+    second: Basic Charakter Actions_6
+  - first:
+      213: 6495871422736360654
+    second: Basic Charakter Actions_9
+  - first:
+      213: 2994222927713007894
+    second: Basic Charakter Actions_10
+  - first:
+      213: 2799679091400172523
+    second: Basic Charakter Actions_12
+  - first:
+      213: 4849325314658181382
+    second: Basic Charakter Actions_14
+  - first:
+      213: -2426259829567902198
+    second: Basic Charakter Actions_15
+  - first:
+      213: 4679016486658029000
+    second: Basic Charakter Actions_16
+  - first:
+      213: -5200884353533555893
+    second: Basic Charakter Actions_19
+  - first:
+      213: 4902032185936214536
+    second: Basic Charakter Actions_20
+  - first:
+      213: -2298048733799735617
+    second: Basic Charakter Actions_21
+  - first:
+      213: 4323988074246068900
+    second: Basic Charakter Actions_22
+  - first:
+      213: 8735991324008606090
+    second: Basic Charakter Actions_23
+  - first:
+      213: 2620953941463647487
+    second: Basic Charakter Actions_24
+  - first:
+      213: 5765744735734028366
+    second: Basic Charakter Actions_27
+  - first:
+      213: 5052846395823243762
+    second: Basic Charakter Actions_28
+  - first:
+      213: -1287694512418270691
+    second: Basic Charakter Actions_30
+  - first:
+      213: -3777842376314121750
+    second: Basic Charakter Actions_32
+  - first:
+      213: 3741611659443118921
+    second: Basic Charakter Actions_34
+  - first:
+      213: -6253168244381199338
+    second: Basic Charakter Actions_36
+  - first:
+      213: 1580416099406824704
+    second: Basic Charakter Actions_37
+  - first:
+      213: 4816461403642677316
+    second: Basic Charakter Actions_39
+  - first:
+      213: 1910425246153343708
+    second: Basic Charakter Actions_40
+  - first:
+      213: -6412192224394054717
+    second: Basic Charakter Actions_41
+  - first:
+      213: -8372313838010680750
+    second: Basic Charakter Actions_42
+  - first:
+      213: 3632699873633713928
+    second: Basic Charakter Actions_43
+  - first:
+      213: 2182775513454752649
+    second: Basic Charakter Actions_45
+  - first:
+      213: -5255587897374970165
+    second: Basic Charakter Actions_47
+  - first:
+      213: -2009579554588690902
+    second: Basic Charakter Actions_48
+  - first:
+      213: -1992285887860088437
+    second: Basic Charakter Actions_49
+  - first:
+      213: 5745176607965465086
+    second: Basic Charakter Actions_50
+  - first:
+      213: -4418995863609243778
+    second: Basic Charakter Actions_51
+  - first:
+      213: -3201369049283663797
+    second: Basic Charakter Actions_53
+  - first:
+      213: -5578190917910324558
+    second: Basic Charakter Actions_55
+  - first:
+      213: -7129468997982154454
+    second: Basic Charakter Actions_56
+  - first:
+      213: -6358856866501785833
+    second: Basic Charakter Actions_57
+  - first:
+      213: -2190757064408948800
+    second: Basic Charakter Actions_58
+  - first:
+      213: -7551138253778315921
+    second: Basic Charakter Actions_60
+  - first:
+      213: -5833524677332762334
+    second: Basic Charakter Actions_62
+  - first:
+      213: -1644949852904213196
+    second: Basic Charakter Actions_63
+  - first:
+      213: -599160631558193838
+    second: Basic Charakter Actions_64
+  - first:
+      213: -1338819730211990599
+    second: Basic Charakter Actions_66
+  - first:
+      213: 24184184048391851
+    second: Basic Charakter Actions_68
+  - first:
+      213: -2454281968953266661
+    second: Basic Charakter Actions_70
+  - first:
+      213: -2784875962641747449
+    second: Basic Charakter Actions_72
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -167,11 +311,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 544
+        y: 540
         width: 16
-        height: 25
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,11 +332,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 541
+        y: 540
         width: 16
-        height: 22
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -211,9 +355,9 @@ TextureImporter:
         x: 16
         y: 496
         width: 16
-        height: 25
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -232,9 +376,9 @@ TextureImporter:
         x: 64
         y: 496
         width: 16
-        height: 20
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,11 +395,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 448
-        width: 17
-        height: 24
+        y: 447
+        width: 21
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -271,12 +415,12 @@ TextureImporter:
       name: Basic Charakter Actions_13
       rect:
         serializedVersion: 2
-        x: 60
+        x: 59
         y: 447
-        width: 20
-        height: 17
+        width: 21
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,10 +438,10 @@ TextureImporter:
         serializedVersion: 2
         x: 15
         y: 400
-        width: 17
+        width: 20
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,12 +457,12 @@ TextureImporter:
       name: Basic Charakter Actions_18
       rect:
         serializedVersion: 2
-        x: 64
+        x: 65
         y: 399
         width: 20
-        height: 17
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -335,11 +479,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 10
-        y: 352
-        width: 22
-        height: 19
+        y: 347
+        width: 21
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -358,9 +502,9 @@ TextureImporter:
         x: 64
         y: 347
         width: 16
-        height: 22
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -376,12 +520,12 @@ TextureImporter:
       name: Basic Charakter Actions_29
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 298
-        width: 23
-        height: 22
+        width: 22
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -398,11 +542,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 304
-        width: 16
-        height: 23
+        y: 298
+        width: 22
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -419,11 +563,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 256
-        width: 23
-        height: 16
+        y: 255
+        width: 27
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,10 +585,10 @@ TextureImporter:
         serializedVersion: 2
         x: 60
         y: 255
-        width: 22
+        width: 27
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -461,11 +605,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 208
+        y: 207
         width: 23
-        height: 16
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -481,12 +625,12 @@ TextureImporter:
       name: Basic Charakter Actions_46
       rect:
         serializedVersion: 2
-        x: 62
+        x: 61
         y: 207
-        width: 22
-        height: 18
+        width: 23
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -502,12 +646,12 @@ TextureImporter:
       name: Basic Charakter Actions_52
       rect:
         serializedVersion: 2
-        x: 15
-        y: 158
-        width: 17
-        height: 18
+        x: 14
+        y: 157
+        width: 18
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -523,12 +667,12 @@ TextureImporter:
       name: Basic Charakter Actions_54
       rect:
         serializedVersion: 2
-        x: 63
-        y: 160
-        width: 17
-        height: 18
+        x: 62
+        y: 159
+        width: 18
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -545,11 +689,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 112
-        width: 16
-        height: 16
+        y: 111
+        width: 18
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -567,10 +711,10 @@ TextureImporter:
         serializedVersion: 2
         x: 64
         y: 112
-        width: 17
-        height: 21
+        width: 18
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -586,12 +730,12 @@ TextureImporter:
       name: Basic Charakter Actions_65
       rect:
         serializedVersion: 2
-        x: 3
-        y: 64
-        width: 29
-        height: 16
+        x: 2
+        y: 63
+        width: 30
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -607,12 +751,12 @@ TextureImporter:
       name: Basic Charakter Actions_67
       rect:
         serializedVersion: 2
-        x: 51
-        y: 64
-        width: 29
-        height: 18
+        x: 50
+        y: 63
+        width: 30
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -625,15 +769,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Actions_69
+      name: WaterCanRigth_Start
       rect:
         serializedVersion: 2
         x: 16
-        y: 16
-        width: 29
-        height: 16
+        y: 15
+        width: 30
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -646,15 +790,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Actions_71
+      name: WaterCanRigth_End
       rect:
         serializedVersion: 2
         x: 64
-        y: 16
-        width: 29
-        height: 18
+        y: 15
+        width: 30
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

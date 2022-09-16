@@ -10,16 +10,11 @@ public class PlayerMovement : MonoBehaviour
 
     [Header ("Propiedades Jugador")]
     // Movement
-    private PlayerControls _playerControls;
-    public Vector2 movementInput;
-    private Rigidbody2D _rb;
-    
-    //Animation
-    private Animator _playerAnimator;
-    private Vector2 _animatorValues;
+    private InputManager inputManager;
+    private AnimatorManager animatorManager;
 
-    //Particle Effect
-    ParticleSystem _particleSystem;
+    
+    private Rigidbody2D _rb;
     
     //Camera
     private Camera _cameraPlayer;
@@ -27,26 +22,20 @@ public class PlayerMovement : MonoBehaviour
 
     [Header ("Estadisticas Jugador")]
     public int playerSpeed;
+    public Vector2 movementInput;
     //private Camera camera;
 
     private void Awake() {
         
         // Define the Input
-        _playerControls = new PlayerControls();
-
-        // Define the animator
-        _playerAnimator = GetComponent<Animator>();
-
-        //  Assing the particle system
-        _particleSystem = this.gameObject.transform.GetChild(0).GetComponent<ParticleSystem>();
-        _particleSystem.Stop();
+        inputManager = GetComponent<InputManager>();
+        animatorManager = GetComponent<AnimatorManager>();
 
         // Define the camera
         _cameraPlayer = FindObjectOfType<Camera>();
 
         // Define components
         _rb = GetComponent<Rigidbody2D>();
-
     }
 
     // Start is called before the first frame update
@@ -59,57 +48,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Input
-        PollInput();
-
+        inputManager.AllMovement();
+        Move(inputManager.moveAmount);
         // Animations
-        AnimationValues();
-    }
-
-    private void OnEnable() {
-        _playerControls.Enable();
-    }
-    private void OnDisable() {
-        _playerControls.Disable();
-    }
-
-    #region MovementRegion
-
-    void PollInput(){
-        var movementInputVector = _playerControls.Player.Move.ReadValue<Vector2>();
-        movementInput = movementInputVector;
-        //Debug.Log(movementInput);
-        Move(movementInputVector);
+        animatorManager.AllAnimations();
     }
 
     public void Move (Vector2 inputVector){
         var movementOffset = inputVector * playerSpeed * Time.fixedDeltaTime;
         var newPosition = _rb.position + movementOffset;
-        _animatorValues = movementOffset;
         _rb.MovePosition(newPosition);
-        //MyAnimator.SetFloat("Movimiento", movementOffset);
     }
-
-
-
-    #endregion
-
-    #region AnimationRegion
-    
-    void AnimationValues(){
-        if(_animatorValues.magnitude == 0){
-            _playerAnimator.SetBool("isIdle",true);
-            _playerAnimator.SetBool("isWalking",false);
-            _particleSystem.Stop();
-        }
-        else{
-            _playerAnimator.SetBool("isIdle",false);
-            _playerAnimator.SetBool("isWalking",true);
-            _particleSystem.Play();
-            _playerAnimator.SetFloat("Horizontal", _animatorValues.x);
-            _playerAnimator.SetFloat("Vertical", _animatorValues.y);
-            _playerAnimator.SetFloat("Speed", _animatorValues.magnitude);
-        }
-    }
-
-    #endregion
 }

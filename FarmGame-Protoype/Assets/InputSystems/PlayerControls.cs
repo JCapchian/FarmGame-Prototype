@@ -29,7 +29,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Move"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""6468c4d9-a72f-4d4a-b738-92868fad6267"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -39,11 +39,29 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
-                    ""id"": ""eaec5cdb-1113-4850-8007-1c16f4072371"",
+                    ""id"": ""ff6d51a5-55e1-4aad-af1d-20aa2984ed9a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseTool"",
+                    ""type"": ""Button"",
+                    ""id"": ""2d906fd5-f280-4f90-8df6-4222cb3a9175"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchTools [Numbers]"",
+                    ""type"": ""Value"",
+                    ""id"": ""174b2176-625b-446f-abb0-1239ec9ca7e5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -181,7 +199,51 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""211ea244-b4a7-4bb7-99c4-d936138ec699"",
+                    ""id"": ""a7d2d7df-4436-499d-abe7-9ed846efd094"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchTools [Numbers]"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7d494a87-8b80-4688-9ba4-df420d77284d"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchTools [Numbers]"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""539339ec-aa72-402b-bf4d-5a5f4f3b2f59"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchTools [Numbers]"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d1cb3127-9e54-4ac1-91e6-6c0c82df6667"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseTool"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6597963-28bc-4d6a-a1dd-9017da17fe64"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -776,6 +838,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_UseTool = m_Player.FindAction("UseTool", throwIfNotFound: true);
+        m_Player_SwitchToolsNumbers = m_Player.FindAction("SwitchTools [Numbers]", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -849,12 +913,16 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_UseTool;
+    private readonly InputAction m_Player_SwitchToolsNumbers;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
         public PlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @UseTool => m_Wrapper.m_Player_UseTool;
+        public InputAction @SwitchToolsNumbers => m_Wrapper.m_Player_SwitchToolsNumbers;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -870,6 +938,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @UseTool.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseTool;
+                @UseTool.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseTool;
+                @UseTool.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseTool;
+                @SwitchToolsNumbers.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchToolsNumbers;
+                @SwitchToolsNumbers.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchToolsNumbers;
+                @SwitchToolsNumbers.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchToolsNumbers;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -880,6 +954,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @UseTool.started += instance.OnUseTool;
+                @UseTool.performed += instance.OnUseTool;
+                @UseTool.canceled += instance.OnUseTool;
+                @SwitchToolsNumbers.started += instance.OnSwitchToolsNumbers;
+                @SwitchToolsNumbers.performed += instance.OnSwitchToolsNumbers;
+                @SwitchToolsNumbers.canceled += instance.OnSwitchToolsNumbers;
             }
         }
     }
@@ -1038,6 +1118,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnUseTool(InputAction.CallbackContext context);
+        void OnSwitchToolsNumbers(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

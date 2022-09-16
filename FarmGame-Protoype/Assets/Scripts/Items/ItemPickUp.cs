@@ -16,7 +16,7 @@ public class ItemPickUp : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             //Call the fuction that save the intem in the inventory
-            _uiManager.UpdateUI(typeItem);
+            _uiManager.UpdateItemsGUI(typeItem);
             
             Destroy(this.gameObject);
 
